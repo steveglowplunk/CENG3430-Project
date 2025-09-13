@@ -1,0 +1,62 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu May 16 23:22:25 2024
+| Host         : 102-035 running 64-bit major release  (build 9200)
+| Command      : report_drc -file vga_driver_drc_routed.rpt -pb vga_driver_drc_routed.pb -rpx vga_driver_drc_routed.rpx
+| Design       : vga_driver
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 5
++----------+----------+--------------------+------------+
+| Rule     | Severity | Description        | Violations |
++----------+----------+--------------------+------------+
+| PDRC-153 | Warning  | Gated clock check  | 4          |
+| ZPS7-1   | Warning  | PS7 block required | 1          |
++----------+----------+--------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net keyboard_completed_reg_i_1_n_0 is a gated clock net sourced by a combinational pin keyboard_completed_reg_i_1/O, cell keyboard_completed_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net mushroom/knob_completed0 is a gated clock net sourced by a combinational pin mushroom/knob_completed_reg_i_2/O, cell mushroom/knob_completed_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net red_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin red_reg[3]_i_2/O, cell red_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net selected_indicator_img_reg[105][799]_i_2_n_0 is a gated clock net sourced by a combinational pin selected_indicator_img_reg[105][799]_i_2/O, cell selected_indicator_img_reg[105][799]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
